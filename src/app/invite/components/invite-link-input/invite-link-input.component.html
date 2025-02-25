@@ -1,0 +1,13 @@
+<app-input-root>
+  <app-input-icon>
+    <lucide-icon [img]="Link" class="size-5"></lucide-icon>
+  </app-input-icon>
+  <app-input-field class="flex-1" [readonly]="true" [(ngModel)]="inviteLink" type="text" placeholder="Digite algo..." />
+  <app-icon-button class="-mr-1 cursor-pointer" (click)="copyToClipboard()">
+    @if(!copied) {
+    <lucide-icon [img]="Copy" class="size-5" />
+    } @else {
+    <lucide-icon [img]="Check" class="size-5" />
+    }
+  </app-icon-button>
+</app-input-root>

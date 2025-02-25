@@ -1,0 +1,59 @@
+<form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" class="space-y-6">
+
+  <h2 class="font-heading font-semibold text-gray-200 text-xl">Inscrição</h2>
+
+  <div class="space-y-3">
+    <!-- Campo de Nome -->
+    <div class="space-y-2">
+      <div>
+        <app-input-root [error]="!!(subscriptionForm.get('name')?.invalid && subscriptionForm.get('name')?.touched)">
+          <app-input-icon>
+            <lucide-icon [img]="User" class="size-6" />
+          </app-input-icon>
+          <app-input-field class="w-full" type="text" placeholder="Nome" formControlName="name"></app-input-field>
+        </app-input-root>
+      </div>
+
+      @if(subscriptionForm.get('name')?.invalid && subscriptionForm.get('name')?.touched){
+      <div class="text-danger font-semibold text-xs">
+        @if(subscriptionForm.get('name')?.errors?.['required']) {
+        <span>Nome é obrigatório.</span>
+        }
+
+        @if(subscriptionForm.get('name')?.errors?.['minlength']){
+        <span>Nome deve ter pelo menos 4 caracteres.</span>
+        }
+      </div>
+      }
+    </div>
+
+    <!-- Campo de Email -->
+    <div class="space-y-2">
+      <div>
+        <app-input-root [error]="!!(subscriptionForm.get('email')?.invalid && subscriptionForm.get('email')?.touched)">
+          <app-input-icon>
+            <lucide-icon [img]="Mail" class="size-6" />
+          </app-input-icon>
+          <app-input-field type="email" class="w-full" placeholder="Email" formControlName="email"></app-input-field>
+        </app-input-root>
+      </div>
+
+      @if(subscriptionForm.get('email')?.invalid && subscriptionForm.get('email')?.touched) {
+      <div class="text-danger font-semibold text-xs">
+        @if(subscriptionForm.get('email')?.errors?.['required']) {
+        <span>Email é obrigatório.</span>
+        }
+
+        @if(subscriptionForm.get('email')?.errors?.['email']){
+        <span>Email inválido.</span>
+        }
+      </div>
+      }
+    </div>
+  </div>
+
+  <app-custom-button type="submit">
+    Confirmar
+    <lucide-icon [img]="ArrowRight" class="size-6" />
+  </app-custom-button>
+</form>
