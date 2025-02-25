@@ -1,27 +1,68 @@
-# NlwConnectAngular
+## Sobre o Projeto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.12.
+Uma aplicação destinada a criar um sistema de ingressos e referrals para um evento fictício.
 
-## Development server
+> `<nlw/> Connect` é um projeto desenvolvido durante o **Next Level Week**, evento online produzido pela [**Rocketseat**](https://www.rocketseat.com.br/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Tecnologias
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<table>
+  <tbody>
+    <tr>
+    <tr>
+      <td>
+        <a href="https://angular.dev/" target="_blank" rel="noopener noreferrer"><code>Angular</code></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Build
+## Libs
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<table>
+  <tbody>
+    <tr>
+    <tr>
+      <td>
+        <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer"><code>TailwindCSS</code></a>
+        <a href="https://lucide.dev/guide/" target="_blank" rel="noopener noreferrer"><code>Lucide Icons</code></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## Running unit tests
+## Configurações
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Requisitos
 
-## Running end-to-end tests
+Necessário realizar as instalações:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- [`Git`](https://git-scm.com/)
+- [`npm`](https://www.npmjs.com/)
+- [`Node`](https://nodejs.org/)
 
-## Further help
+Criar conta e configurar os serviços externos:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [`GitHub`](https://github.com/)
+
+
+### Clonar repositório e instalar dependências
+
+#### `/nlw-connect-angular`
+
+```bash
+# Execute o comando git clone para realizar o clone do repositório
+$ git clone https://github.com/cn-2k/nlw-connect-angular
+
+# Entre na pasta do repositório clonado
+$ cd nlw-connect-angular
+
+# Instale as dependências necessárias
+$ npm install
+
+# Inicie a aplicação em servidor de desenvolvimento
+$ npm run start
+```
+
+Feito isso, acesse `localhost:3000` e comece a utilizar a aplicação.
